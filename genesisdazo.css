@@ -1,0 +1,165 @@
+Shipping Cost Calculator Program
+
+# Function to calculate shipping cost
+def calculate_shipping_cost(package_weight, destination):
+    domestic_rate_per_kg = 5  # Example domestic shipping rate per kilogram
+    international_rate_per_kg = 10  # Example international shipping rate per kilogram
+
+    if destination == "Domestic":
+        shipping_cost = package_weight * domestic_rate_per_kg
+    elif destination == "International":
+        shipping_cost = package_weight * international_rate_per_kg
+    else:
+        print("Invalid destination")
+        return None
+
+    return shipping_cost
+
+# Example usage
+package_weight = 2.5  # Replace with the actual weight of the package
+destination = "International"  # Replace with "Domestic" or "International"
+shipping_cost = calculate_shipping_cost(package_weight, destination)
+
+if shipping_cost is not None:
+    print(f"Shipping cost for a {package_weight} kg package to {destination}: ${shipping_cost}")
+
+
+
+using System;
+
+namespace ScoreCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter assignment score (out of 100): ");
+            double assignmentScore = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter exam score (out of 100): ");
+            double examScore = Convert.ToDouble(Console.ReadLine());
+
+            // Assignments contribute 40% to the final score
+            double assignmentWeight = 0.4;
+            
+            // Exams contribute 60% to the final score
+            double examWeight = 0.6;
+
+            // Calculate the final score
+            double finalScore = (assignmentScore * assignmentWeight) + (examScore * examWeight);
+
+            Console.WriteLine($"Final Score: {finalScore}");
+        }
+    }
+}
+
+
+
+using System;
+
+namespace ScoreCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter assignment score (out of 100): ");
+            double assignmentScore = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter exam score (out of 100): ");
+            double examScore = Convert.ToDouble(Console.ReadLine());
+
+            // Assignments contribute 40% to the final score
+            double assignmentWeight = 0.4;
+
+            // Exams contribute 60% to the final score
+            double examWeight = 0.6;
+
+            // Calculate the final score
+            double finalScore = (assignmentScore * assignmentWeight) + (examScore * examWeight);
+
+            Console.WriteLine($"Final Score: {finalScore}");
+
+            // Determine the final grade
+            string finalGrade;
+            if (finalScore >= 90)
+                finalGrade = "A";
+            else if (finalScore >= 80)
+                finalGrade = "B";
+            else if (finalScore >= 70)
+                finalGrade = "C";
+            else if (finalScore >= 60)
+                finalGrade = "D";
+            else
+                finalGrade = "F";
+
+            Console.WriteLine($"Final Grade: {finalGrade}");
+        }
+    }
+}
+
+using System;
+
+namespace ScoreCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter assignment score (out of 100): ");
+            double assignmentScore = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter exam score (out of 100): ");
+            double examScore = Convert.ToDouble(Console.ReadLine());
+
+            // Assignments contribute 40% to the final score
+            double assignmentWeight = 0.4;
+
+            // Exams contribute 60% to the final score
+            double examWeight = 0.6;
+
+            // Calculate the final score
+            double finalScore = (assignmentScore * assignmentWeight) + (examScore * examWeight);
+
+            Console.WriteLine($"Final Score: {finalScore}");
+
+            // Determine the final grade
+            string finalGrade;
+            if (finalScore >= 90)
+                finalGrade = "A";
+            else if (finalScore >= 80)
+                finalGrade = "B";
+            else if (finalScore >= 70)
+                finalGrade = "C";
+            else if (finalScore >= 60)
+                finalGrade = "D";
+            else
+                finalGrade = "F";
+
+            Console.WriteLine($"Final Grade: {finalGrade}");
+        }
+    }
+
+}
+
+
+using System;
+
+namespace ShippingCostCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the package weight (in kilograms): ");
+            double packageWeight = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the destination (\"Domestic\" or \"International\"): ");
+            string destination = Console.ReadLine();
+
+            double shippingCost;
+
+            if (destination == "Domestic")
+            {
+                if (packageWeight <= 2)
+                    shippingCost = packageWeight * 5.00;
